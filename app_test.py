@@ -6,20 +6,20 @@ import requests
 
 
 st.set_page_config(page_title='Gemma2 Chatbot', 
-                    page_icon = "images/gemma_avatar.jpg",
+                    page_icon = "data/gemma_avatar.jpg",
                     initial_sidebar_state = 'auto')
 
 background_color = "#252740"
 
 avatars = {
-    "assistant" : "images/gemma_avatar.jpg",
-    "user": "images/user_avatar.png"
+    "assistant" : "data/gemma_avatar.jpg",
+    "user": "data/user_avatar.png"
 }
 
 st.markdown("<h2 style='text-align: center; color: #3184a0;'>Gemma2 Chatbot</h2>", unsafe_allow_html=True)
 
 with st.sidebar:
-    st.image("images/gemma.jpg")
+    st.image("data/gemma.jpg")
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
