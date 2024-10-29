@@ -17,8 +17,8 @@ class ModelInterface:
         self.initialize_model()
 
     def initialize_model(self):
-        # Initialize your model here if needed
-        pass
+        self.tokenizer = tokenizers.GemmaTokenizer.from_preset(self.path_to_model)
+        self.model = keras_nlp.models.GemmaCausalLM.from_preset(self.path_to_model)
 
     def process_user_input(self, user_input, api_data="", max_length=256):
         processed_input = self.template.format(instruction=user_input, response=api_data)
