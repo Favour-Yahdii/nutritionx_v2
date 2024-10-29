@@ -2,7 +2,7 @@ import requests
 import spacy
 import keras_nlp
 from google.colab import userdata
-from time import sleep
+from keras_nlp import tokenizers
 
 class ModelInterface:
     def __init__(self):
