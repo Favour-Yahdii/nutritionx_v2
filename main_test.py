@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI
-from model_interface import ModelInterface
+from function_call2 import ModelInterface
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
