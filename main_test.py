@@ -28,7 +28,7 @@ model_interface = ModelInterface()
 @app.post("/chat_messages/")
 def chat_messages(input: Input):
 
-    agent_response = model_interface.get_message_response(input_text=input.input_text)
+    agent_response = ModelInterface.get_message_response(input_text=input.input_text)
     print(agent_response)
     return {"agent": agent_response["response"]}
     
